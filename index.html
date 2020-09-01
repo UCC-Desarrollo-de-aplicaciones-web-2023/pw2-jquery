@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="estilos.css" />
+        <script src="ejercicios.js"></script>
+        <!--<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+        <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+        <script src="test.min.js"></script>-->
+    </head>
+    <body>
+        <div class="ejercicio" id="ejercicio1">
+            <h2>Ejercicio 1</h2>
+
+            <p>Al elemento #contenedor, cambia su color de fuente, borde y fondo.</p>
+            <p>Nota: utiliza 3 colores distintos</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado">
+
+                <div id="contenedor">
+                    <p>#contenedor</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio2">
+            <h2>Ejercicio 2</h2>
+
+            <p>Realiza las siguientes acciones a los elementos de la #lista-no-ordenada</p>
+
+            <ul>
+                <li>Cambia el color de fuente del octavo elemento a verde</li>
+                <li>Sin utilizar el método .eq(), cambia el estilo de fuente a itálica del primer articulo par.</li>
+                <li>Sin utilizar el método .eq(), cambia el estilo a texto subrayado del último elemento non.</li>
+                <li>Sin utilizar el método .eq(), cambia el estilo a mayúsculas de todos los artículos pares.</li>
+            </ul>
+
+            <div class="resultado">
+                <input type="button" value="Resultado" />
+
+                <ul id="lista-no-ordenada">
+                    <li class="elemento non">Elemento 1</li>
+                    <li class="articulo par">Artículo 2</li>
+                    <li class="elemento non">Elemento 3</li>
+                    <li class="articulo par">Artículo 4</li>
+                    <li class="articulo non">Artículo 5</li>
+                    <li class="elemento par">Elemento 6</li>
+                    <li class="articulo non">Artículo 7</li>
+                    <li class="elemento par">Elemento 8</li>
+                    <li class="elemento non">Elemento 9</li>
+                    <li class="articulo par">Artículo 10</li>
+                    <li class="elemento non">Elemento 11</li>
+                    <li class="articulo par">Artículo 12</li>
+                    <li class="elemento non">Elemento 13</li>
+                    <li class="elemento par">Elemento 14</li>
+                    <li class="articulo non">Artículo 15</li>
+                    <li class="articulo par">Artículo 16</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio3">
+            <h2>Ejercicio 3</h2>
+
+            <p>Ajusta el valor de los atributos de #dia-noche de la siguiente manera</p>
+            <ul>
+                <li>Cambia la imagen por <code>img/noche.png</code></li>
+                <li>Ancho de la imagen a 200</li>
+                <li>Alto de la imagen a 193</li>
+            </ul>
+
+            <p>Nota: utiliza el método .attr() <b>sólo una vez</b>.</p>
+
+
+            <div class="resultado">
+                <input type="button" value="Resultado" />
+                <br>
+                <img src="img/dia.png" alt="Día" width="340" height="347" id="dia-noche">
+
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio4a">
+            <h2>Ejercicio 4a</h2>
+
+            <p>Utilizando el texto del elemento #hello-world como objetivo, deberás implementar lo siguiente:</p>
+
+            <ul>
+                <li>Al presionar el botón #hello deberá cambiarlo a "hello"</li>
+                <li>Botón #world deberá cambiar el texto a "world"</li>
+                <li>Botón #negritas deberá aplicar estilo de fuente negritas. Al presionarlo nuevamente deberá quitar el estilo.</li>
+                <li>Botón #cursivas deberá aplicar estilo de fuente cursivas. Al presionarlo nuevamente deberá quitar el estilo.</li>
+                <li>Botón #subrayado deberá aplicar estilo de texto subrayado. Al presionarlo nuevamente deberá quitar el estilo.</li>
+                <li>El campo #separacion ajustará la distancia de separación entre caracteres.</li>
+                <li>Botón #tamano deberá intercalar el cambio de minúsculas a mayúsculas. Al presionarlo nuevamente deberá hacer la operación inversa.</li>
+                <li>El campo #color deberá cambiar el color de fuente al escoger un color.</li>
+            </ul>
+
+            <p>Define las funciones que son llamadas por los elementos botón y color.</p>
+
+            <p>Nota: en la hoja de estilos están definidas las clases .negritas, .cursivas, .subrayado, .mayusculas, .minusculas. Utiliza dichas clases para aplicar el estilo al texto con la ayuda de los métodos que permiten manipular las clases de los elementos.</p>
+
+
+            <div class="resultado">
+                <div>
+                    <input type="button" onclick="aplicarCambioTexto('hello')" value="hello" id="hello">
+                    <input type="button" onclick="aplicarCambioTexto('world')" value="world" id="world">
+                    <input type="button" onclick="aplicarCambioNegritas()" value="negritas" id="negritas">
+                    <input type="button" onclick="aplicarCambioCursivas()" value="cursivas" id="cursivas">
+                    <input type="button" onclick="aplicarCambioSubrayado()" value="subrayado" id="subrayado">
+                    <input type="number" onchange="aplicarCambioSeparacion( this.value )" id="separacion" value="0"/>
+                    <input type="button" onclick="aplicarCambioTamano()" value="tamaño" id="tamano">
+                    <input type="color" onchange="aplicarCambioColor( this.value )" id="color" value="#000000">
+                </div>
+                <div id="hello-world">
+                    hello-world
+                </div>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio4">
+            <h2>Ejercicio 4</h2>
+
+            <p>Desactiva #deshabilitame</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado" />
+
+                <div>
+                    <select id="deshabilitame">
+                        <option value="">Seleccione una opción...</option>
+                        <option value="1">Valor uno</option>
+                        <option value="2">Valor dos</option>
+                        <option value="3">Valor tres</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ejercicio" id="ejercicio5">
+            <h2>Ejercicio 5</h2>
+
+            <p>Desmarca todos los checkbox, marca el <b>cuarto</b> radiobutton</p>
+
+            <p>Nota: usando código...</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado" />
+
+                <h4>Desmarcar</h4>
+                <div id="desmarca">
+                    <input type="checkbox" checked="checked"> Desmarcame<br>
+                    <input type="checkbox" checked="checked"> Desmarcame<br>
+                    <input type="checkbox" checked="checked"> Desmarcame<br>
+                    <input type="checkbox" checked="checked"> Desmarcame<br>
+                    <input type="checkbox" checked="checked"> Desmarcame<br>
+                </div>
+
+                <h4>Marcar</h4>
+                <div id="marca">
+                    <input type="radio"/> Radio 1<br>
+                    <input type="radio"/> Radio 2<br>
+                    <input type="radio"/> Radio 3<br>
+                    <input type="radio"/> Radio 4<br>
+                    <input type="radio"/> Radio 5<br>
+                </div>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio6">
+            <h2>Ejercicio 6</h2>
+
+            <p>Cambia el ancho y alto del elemento #quiero-crecer a las medidas especificadas en sus atributos data-*.</p>
+            <p>Nota: utiliza el método .data()</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado" />
+                <div id="quiero-crecer" data-ancho="600" data-alto="400">
+                    ¡¡Quiero crecer!!
+                </div>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio7">
+            <h2>Ejercicio 7</h2>
+
+            <p>En el formulario #registro, haz que el elemento de entrada de tipo text sea de sólo lectura.</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado" />
+
+                <form id="registro">
+                    <label><input type="text" /> Usuario</label><br>
+                    <label><input type="password" /> Contraseña</label><br>
+                    <input type="button" value="Continuar" />
+                </form>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio8">
+            <h2>Ejercicio 8</h2>
+
+            <p>Mediante código, selecciona la segunda opción de la lista desplegable.</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado"><br>
+                <select>
+                    <option>Seleccione una opción</option>
+                    <option value="1">Opción 1</option>
+                    <option value="2">Opción 2</option>
+                    <option value="3">Opción 3</option>
+                    <option value="4">Opción 4</option>
+                    <option value="5">Opción 5</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio9">
+            <h2>Ejercicio 9</h2>
+
+            <p>Mueve al elemento #hijo del #padre a #madre</p>
+
+            <p>Tip: usa el método <a href="https://api.jquery.com/detach/" target="_blank" title="Ir a la documentación">detach()</a></p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado" /><br/>
+
+                <div id="padre">
+                    <p>Padre</p>
+                        <span id="hijo">Hijo</span>
+                </div>
+
+                <div id="madre">
+                    <p>Madre</p>
+                </div>
+
+                <br>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio10">
+            <h2>Ejercicio 10</h2>
+
+            <p>Realiza las siguientes acciones:</p>
+                <ul>
+                    <li>Agrega a #lista-dias-semana los días de la semana faltantes.</li>
+                    <li>Agrega a #lista-meses los meses del año faltantes.</li>
+                    <li>Inserta un elemento h3 justo antes de cada lista, con el texto "Lista de días" y "Lista de meses" respectivamente</li>
+                    <li>Inserta el logotipo de jQuery después de la #lista-meses.</li>
+                </ul>
+            <p>Archivo del logotipo <code>img/jquery_logo.png</code></p>
+
+
+            <div class="resultado">
+
+                <input type="button" value="Resultado"/>
+
+                <ol id="lista-dias-semana">
+                    <li>Lunes</li>
+                    <li>Martes</li>
+                    <li>Miércoles</li>
+                </ol>
+
+                <ol id="lista-meses">
+                    <li>Junio</li>
+                    <li>Julio</li>
+                    <li>Agosto</li>
+                    <li>Septiembre</li>
+                    <li>Octubre</li>
+                    <li>Noviembre</li>
+                    <li>Diciembre</li>
+                </ol>
+
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio11">
+            <h2>Ejercicio 11</h2>
+
+            <p>Remueve todas los .piojos de la #cabeza.</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado" />
+                <div id="cabeza">
+                    <div class="piojos">&nbsp;</div>
+                    <div class="piojos">&nbsp;</div>
+                    <div class="piojos">&nbsp;</div>
+                    <div class="piojos">&nbsp;</div>
+                    <div class="piojos">&nbsp;</div>
+                    <div class="piojos">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio12">
+            <h2>Ejercicio 12</h2>
+
+            <p>Completa el #gato con la fila inferior faltante. Cambiar el color de fondo de las celdas en la diagonal que gustes para marcar la victoria.</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado" />
+
+                <table id="gato">
+                    <tr>
+                        <td>X</td>
+                        <td>0</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>X</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio13">
+            <h2>Ejercicio 13</h2>
+
+            <p>Toma como referencia inicial al elemento #yo y realiza las siguientes actividades en ORDEN:</p>
+            <ol>
+                <li>Cambia el color de fondo de la hermana a blue</li>
+                <li>Cambia el color de fondo de #yo a green</li>
+                <li>Cambia el color de fondo del hermano a red</li>
+                <li>Cambia el color de fondo a purple del padre de los 3 hermanos</li>
+                <li>Cambia el color de fondo a gray del abuelo</li>
+                <li>Cambia el color de fuente a white de todos los descendientes del albuelo</li>
+            </ol>
+            <p>Utiliza los métodos diseñados para desplazarte por el DOM, y llámalos de manera <b>encadenada</b> y secuencial.</p>
+
+
+            <div class="resultado">
+                <input type="button" value="Resultado">
+
+                <div id="arbol-genealogico">
+                    <div>
+                        Abuelo
+                        <div>
+                            Papá
+                            <br>
+
+                            <div>
+                                Hermano
+                            </div>
+                            <div id="yo">
+                                Yo
+                            </div>
+
+                            <div>
+                                Hermana
+                            </div>
+
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ejercicio" id="ejercicio14">
+            <h2>Ejercicio 14</h2>
+
+            <p>Muestra en consola el nombre de cada .heredero, respecto a #descendencia.</p>
+            <p>Nota: resuelve el ejercicio utilizando el método .each()</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado">
+
+                <div id="descendencia">
+                    <div class="heredero">Hugo</div>
+                    <div class="heredero">María</div>
+                    <div class="heredero">Paco</div>
+                    <div class="heredero">Lisa</div>
+                    <div class="heredero">Luis</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio15">
+            <h2>Ejercicio 15</h2>
+
+            <p>Cambia el color de borde a verde de aquellos elementos que contengan valores númericos, en caso contrario el borde cámbialo a rojo.</p>
+            <p>Nota: resuelve el ejercicio utilizando el método .each()</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado">
+
+
+                <div id="marcalos">
+                    <input type="text" value="123" readonly="readonly"/><br>
+                    <input type="text" value="aabbcc" readonly="readonly" /><br>
+                    <input type="text" value="??**&&" readonly="readonly" /><br>
+                    <input type="text" value="999" readonly="readonly" />
+                </div>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio16">
+            <h2>Ejercicio 16</h2>
+
+            <p>Realiza cada operación, toma los valores de las columnas num1 y num2. El resultado de cada operación muestralo en su correspondiente renglón de la columna resultado</p>
+            <p>Nota: resuelve el ejercicio utilizando el método .each()</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado">
+
+                <table id="sumas">
+                    <thead>
+                        <tr>
+                            <th>num1</th>
+                            <th>operacion</th>
+                            <th>num2</th>
+                            <th>igual</th>
+                            <th>resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>50</td>
+                            <td>+</td>
+                            <td>25</td>
+                            <td>=</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>+</td>
+                            <td>48</td>
+                            <td>=</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>+</td>
+                            <td>303</td>
+                            <td>=</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio17">
+            <h2>Ejercicio 17</h2>
+
+            <p>Cambia el color de fondo y fuente de aquellas celdas que contengan valores mayores a 10</p>
+            <p>Nota 1: selecciona los colores que gustes para el fondo y fuente y aplícalos a todas las celdas que cumplan con la condición.</p>
+            <p>Nota 2: resuelve el ejercicio utilizando el método .each()</p>
+
+            <div class="resultado">
+                <input type="button" value="Resultado">
+
+                <table id="mayores-que-10">
+                  <tr>
+                    <td>183</td>
+                    <td>5</td>
+                    <td>201</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>9</td>
+                    <td>97</td>
+                  </tr>
+                  <tr>
+                    <td>21</td>
+                    <td>8</td>
+                    <td>47</td>
+                  </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio18">
+            <h2>Ejercicio 18</h2>
+
+            <p>Si el #foco se encuentra apagado, al dar click sobre él debe prenderse (cambiar la imagen del elemento img). Si está encendido debe apagarse.</p>
+            <p>Imágenes:</p>
+            <ul>
+                <li><code>img/foco_apagado.png</code></li>
+                <li><code>img/foco_encendido.png</code></li>
+            </ul>
+
+            <p>Notas:</p>
+            <ol>
+                <li>Cuando se encienda, adicionalmente cambia el color de fondo de todo el cuerpo del documento al color ffdd73</li>
+                <li>Apóyate del atributo data-estado del elemento #foco para determinar el estado actual del foco. Cambia su valor como te sea conveniente con el método .data()</li>
+                <li>Elimina el salto de la ventana utilizando el método <code>event.preventDefault()></code></li>
+            </ol>
+
+
+            <div class="resultado">
+                <a href="#" id="foco" data-estado="apagado"><img alt="Foco" src="img/foco_apagado.png"></a>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio19">
+            <h2>Ejercicio 19</h2>
+
+            <p>Convierte a mayúsculas todo el texto que se escriba en el campo #a-mayusculas, cuando pierda el foco (blur).</p>
+
+            <div class="resultado">
+                <label>A mayúsculas<br>
+                    <input type="text" id="a-mayusculas" />
+                </label>
+            </div>
+
+        </div>
+
+        <div class="ejercicio" id="ejercicio20">
+            <h2>Ejercicio 20</h2>
+
+            <p>Al seleccionar un sitio de la lista #lista-buscadores, deberá abrirse dicho sitio en otra ventana. Valida que el valor del la URL no esté vacío</p>
+            <p>Nota: registra un manejador al evento <code>change</code> de #lista-buscadores.</p>
+
+
+            <div class="resultado">
+                <label>Sitio<br>
+                    <select id="lista-buscadores">
+                        <option value="">Selecciona una opción</option>
+                        <option value="http://www.google.com">Google</option>
+                        <option value="http://www.yahoo.com">Yahoo</option>
+                        <option value="https://duckduckgo.com/">DuckDuckGo</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+
+        <div class="ejercicio" id="ejercicio21">
+            <h2>Ejercicio 21</h2>
+
+            <p>Al dar click sobre el botón #llenar-estados, deberá llenarse de opciones la lista desplegable #lista-estados. Click sobre #borrar-estados, deberá borrarlas.</p>
+            <p>Los elementos para las opciones de lista se encuentran en el arreglo llamado listaEstados (global en el código JS), el cual contiene los nombres de los Estados de la República. El texto de cada opción de la lista deberá ser el nombre un Estado y su valor el índice  correspondiente del arreglo.</p>
+
+            <div class="resultado">
+                <label>Estados<br>
+                    <select id="lista-estados"></select>
+                </label>
+                <p>
+                    <input type="button" id="llenar-estados" value="Llenar" />
+                    <input type="button" id="borrar-estados" value="Borrar" />
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="ejercicio" id="ejercicio22">
+
+            <h2>Ejercicio 22</h2>
+
+            <p>Valida el formulario #nuevo-usuario, impidiendo sea enviado si no cumple con las siguientes reglas:</p>
+            <ul>
+                <li>El usuario no se debe ser el mismo a alguno de los que se encuentran dentro del arreglo usuariosRegistrados (variable global en el código JS).</li>
+                <li>La contraseña #contra2 debe ser igual a #contra1.</li>
+                <li>El campo #acuerdos debe estar marcado (<i>checked</i>).</li>
+            </ul>
+
+            <p>En caso de error, muestra el/los mensaje(s) usando una lista no ordenada dentro de #errores (oculto inicialmente).</p>
+
+            <div class="resultado">
+
+                <div id="errores">errores</div>
+
+                <form id="nuevo-usuario">
+
+                    <label>Nombre de usuario<br>
+                        <input type="text" id="usuario" />
+                    </label>
+
+                    <br>
+
+                    <label>Contraseña<br>
+                        <input type="password" id="contra1" />
+                    </label>
+
+                    <br>
+
+                    <label>Confirmar contraseña<br>
+                        <input type="password" id="contra2" />
+                    </label>
+
+                    <br>
+
+                    <label><input type="checkbox" id="acuerdos" value="acepto"/> Acepto el acuerdo</label>
+
+                    <br>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+
+        </div>
+
+
+
+        <div class="ejercicio" id="ejercicio23">
+            <h2>Ejercicio 23</h2>
+
+
+            <p>Conversor de divisas</p>
+
+            <p>El conversor deberá calcular lo equivalente en dolares, euros y libras de la cantidad escrita en el campo #pesos. Dicha conversión se deberá llevar a cabo al momento que el usuario escribe una cantidad (keyup) y actualizarse en el espacio correspondiente de cada moneda (elementos h4).</p>
+            <p>El tipo de cambio de cada divisa se ecuentra almacenada en los atributos data-* de los elementos .divisa, el cual debes utilizar para realizar la conversión.</p>
+            <p>Nota: debe validarse que lo escrito en el campo #pesos sea númerico para relizar las conversiones, caso contrario mostrar cero.</p>
+
+            <div class="resultado">
+
+                <p class="demo"><a href="https://codepen.io/rsanchez/full/vsduh/" target="_blank">Ver demostración</a></p>
+                <div class="en-pesos">
+                    $ <input type="number" id="pesos"> pesos <br>
+                </div>
+                <div class="conversor">
+                    <div id="dolares" class="divisa" data-cambio="19.50">
+                        <h4>0</h4>
+                        <h5>Dolares</h5>
+                    </div>
+
+                    <div id="euros" class="divisa" data-cambio="21.54">
+                        <h4>0</h4>
+                        <h5>Euros</h5>
+                    </div>
+
+                    <div id="libras" class="divisa" data-cambio="24.09">
+                        <h4>0</h4>
+                        <h5>Libras</h5>
+                    </div>
+
+                    <br>
+               </div>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio24">
+            <h2>Ejercicio 24</h2>
+
+            <p>Realiza la siguientes acciones en la #galeria-animales:</p>
+            <ul>
+                <li>Se deberá mostrar y ocultar la #galeria-animales al dar clic sobre el botón #boton-galeria (dependiendo del estado es la acción a realizar).</li>
+                <li>Oculta el pie de la foto cuando se posicione el puntero del mouse sobre la imágen (mouseenter) y muéstralo cuando el puntero salga (mouseleave)</li>
+            </ul>
+            <p>Mostrar y ocultar deben ser con la animación slide.</p>
+
+            <p class="demo"><a href="https://codepen.io/rsanchez/full/zJIub/" target="_blank">Ver demostración</a></p>
+
+            <div class="resultado">
+                <div>
+                    <input type="button" id="boton-galeria" value="Galería de animales" />
+                </div>
+                <ul id="galeria-animales">
+                    <li>
+                        <img src="img/animales/rinocerontes.jpg" width="200" alt="Rinocerontes">
+                        <span>Rinocerontes</span>
+                    </li>
+
+                    <li>
+                        <img src="img/animales/jirafas.jpg" width="200" alt="Jirafas">
+                        <span>Jirafas</span>
+                    </li>
+
+                    <li>
+                        <img src="img/animales/pavo_real.jpg" width="200" alt="Pavo real">
+                        <span>Pavo real</span>
+                    </li>
+                </ul>
+
+                <br>
+
+            </div>
+
+        </div>
+
+        <div class="ejercicio" id="ejercicio25">
+            <h2>Ejercicio 25</h2>
+
+            <p>Realiza las siguientes acciones:</p>
+            <ul>
+                <li>Al dar clic en cualquier foto miniatura de #galeria-miniaturas deberá mostrarse su versión completa dentro del contenedor #galeria-miniaturas-completa.</li>
+                <li>La imagen completa que se esté mostrando deberá desvanecer (fadeOut) hasta ocultarse y al terminar dicha animación, la nueva imagen debe ser mostrada con la animación opuesta (FadeIn).</li>
+            </ul>
+
+            <p>Nota: la URL de la imagen en su versión completa se encuentra asignada al atributo data-completa de la liga de la miniatura.</p>
+
+            <p class="demo"><a href="https://codepen.io/rsanchez/full/oEufG/" target="_blank">Ver demostración</a></p>
+
+
+            <div class="resultado">
+                <div id="contenedor-galeria-miniaturas">
+                    <ul id="galeria-miniaturas">
+                        <li>
+                            <a href="#" data-completa="img/animales/caballo.jpg">
+                                <img src="img/animales/thumbs/caballo.jpg" width="100" height="67" alt="Caballo">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" data-completa="img/animales/oveja.jpg">
+                                <img src="img/animales/thumbs/oveja.jpg" width="100" height="67" alt="Oveja">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" data-completa="img/animales/gatos.jpg">
+                                <img src="img/animales/thumbs/gatos.jpg" width="100" height="67" alt="Gatos">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" data-completa="img/animales/tigres.jpg">
+                                <img src="img/animales/thumbs/tigres.jpg" width="100" height="67" alt="Tigres">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" data-completa="img/animales/zebras.jpg">
+                                <img src="img/animales/thumbs/zebras.jpg" width="100" height="67" alt="Zebras">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <br>
+
+                    <div id="galeria-miniaturas-completa">
+                        <img src="img/animales/caballo.jpg" width="600" height="400" alt="Caballo">
+                    </div>
+
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="ejercicio" id="ejercicio26">
+            <h2>Ejercicio 26</h2>
+
+
+            <p>Lista de tareas</p>
+
+            <p>El administrador de tareas permitirá al usuario agregar y eliminar tareas.</p>
+            <p>Al escribir una nueva tarea en el campo #nueva-tarea y seleccionar la fecha de realización con el campo #fecha-tarea (validar que ambos campos estén llenos), dicha información se debe agregar al final de la tabla #mis-tareas, en las columnas correspondientes.</p>
+            <p>Se deberá eliminar el renglón de la tarea al dar clic sobre la liga .eliminar. Confirmar con el método window.confirm() antes de eliminar.</p>
+            <p>Nota: delega el evento clic del elemento .eliminar a la tabla #mis-tareas</p>
+            <p>Reto: implementa la funcionalidad de <b>editar</b> tareas</p>
+
+            <div class="resultado">
+                <input type="text" id="nueva-tarea" placeholder="Nueva tarea" />
+                <input type="date" id="fecha-tarea"/>
+
+
+                <input type="button" value="Agregar" id="boton-agregar-tarea">
+
+                <table id="mis-tareas">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>Tarea</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#" class="eliminar">Eliminar</a></td>
+                            <td>Llevar zapatos a pintar</td>
+                            <td>2014-08-01</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="eliminar">Eliminar</a></td>
+                            <td>Comprar la comida</td>
+                            <td>2014-07-31</td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+        </div>
+
+    </body>
+</html>

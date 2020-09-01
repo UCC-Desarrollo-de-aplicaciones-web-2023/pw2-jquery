@@ -1,0 +1,285 @@
+body {
+font-family:'Open Sans', sans-serif;
+font-size:16px;
+margin:0;
+padding:0;
+}
+
+.ejercicio {
+background-color:#f4f4f4;
+border:1px solid #000;
+max-width:750px;
+margin:0 auto 25px;
+padding:5px 5px 10px 10px;
+}
+
+.ejercicio > h2 {
+color:red;
+letter-spacing:20px;
+font-weight:300;
+font-size:3em;
+margin:0;
+padding:0;
+}
+
+table {
+border-collapse:collapse;
+max-width:700px;
+margin:0 auto;
+}
+
+table th,table td {
+border:1px solid #888;
+padding:5px;
+}
+
+table th {
+background-color:#000;
+color:#fff;
+}
+
+table td {
+background-color:#fff;
+}
+
+a img {
+border:0;
+}
+
+#mayores-que-10 td {
+width:33%;
+text-align:center;
+padding:10px;
+}
+
+input{
+    border: 1px solid #888;
+    outline: none;
+    padding: 7px;
+}
+
+
+input[type='button'],input[type='submit'] {
+padding:7px 14px;
+}
+
+input[type='button']:hover,input[type='submit']:hover{
+    background-color: #f4f4f4;
+}
+
+.demo {
+text-align:center;
+}
+
+.resultado > input[type='button'] {
+background-color:red;
+color:#FFF;
+border:0;
+cursor:pointer;
+margin-bottom:30px;
+}
+
+.resultado > input[type='button']:hover {
+background-color:#c00;
+}
+
+#contenedor {
+width:150px;
+height:150px;
+background-color:#fff;
+}
+
+.elemento {
+color:blue;
+}
+
+.articulo {
+color:red;
+}
+
+#hello-world{
+font-size: 5.0em;
+}
+
+#separacion{
+    width: 50px;
+}
+
+.negritas{
+font-weight: bold;
+}
+
+.cursivas{
+font-style:italic;
+}
+
+.subrayado{
+text-decoration: underline;
+}
+
+.mayusculas{
+text-transform: uppercase;
+}
+
+.minusculas{
+text-transform: lowercase;
+}
+
+#quiero-crecer {
+width:300px;
+height:200px;
+background-color:#9ED730;
+color:#347278;
+}
+
+#copiame {
+width:150px;
+height:150px;
+background-color:#80ffff;
+}
+
+#padre {
+width:200px;
+height:200px;
+float:left;
+background-color:#94f3fe;
+}
+
+#madre {
+width:200px;
+height:200px;
+float:right;
+background-color:#ff80c0;
+}
+
+#hijo {
+width:50px;
+height:50px;
+display:block;
+background-color:silver;
+}
+
+#gato td {
+font-size:3em;
+padding:10px;
+}
+
+#cabeza {
+width:280px;
+height:300px;
+background:url(img/cabeza.png);
+margin:0 auto;
+}
+
+.piojos {
+height:50px;
+width:60px;
+float:left;
+margin-left:30px;
+background-image:url(img/pulga.gif);
+}
+
+#arbol-genealogico div{
+padding:10px;
+border:1px solid #000000;
+}
+#arbol-genealogico > div > div > div{
+    float:left;
+    width:100px;
+}
+
+#sumas td {
+width:20%;
+text-align:center;
+}
+
+#errores {
+display:none;
+width:300px;
+background-color:#ffa8a8;
+color:red;
+text-align:center;
+margin:0 auto;
+padding:10px;
+}
+
+.divisa {
+width:33%;
+float:left;
+margin:0;
+}
+
+.divisa h4 {
+font-size:1.5em;
+text-align:center;
+}
+
+.divisa h5 {
+font-size:1.2em;
+text-align:center;
+}
+
+#boton-galeria {
+display:block;
+margin:10px auto 20px;
+}
+
+#contenedor-galeria-miniaturas {
+width:650px;
+height:550px;
+margin:0 auto;
+}
+
+#galeria-miniaturas {
+list-style-type:none;
+padding:0;
+}
+
+#galeria-miniaturas li {
+float:left;
+position:relative;
+margin-right:25px;
+max-width:100px;
+}
+
+#galeria-miniaturas-completa {
+width:600px;
+height:400px;
+}
+
+br {
+clear:both;
+}
+
+#galeria-animales {
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+#galeria-animales li {
+float:left;
+position:relative;
+margin-left:20px;
+max-width:250px;
+background:#252b30;
+border:1px solid #121415;
+padding:5px 5px 0;
+}
+
+#galeria-animales span {
+background-color:rgba(0,0,0,0.5);
+bottom:5px;
+font-size:14px;
+height:30px;
+left:5px;
+line-height:30px;
+position:absolute;
+right:5px;
+text-indent:10px;
+top:auto;
+color:#FFF;
+}
+#sumas th{
+    width: 100px;
+}
